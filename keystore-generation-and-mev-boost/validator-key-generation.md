@@ -53,6 +53,8 @@
 
 Download the latest version of the Ethereum validator deposit key generation binary file [here](https://github.com/ethereum/staking-deposit-cli/releases) and verify the checksum of the downloaded zipped file.
 
+Note: depending on where you are downloading the file, you will have to amend all the following commands below. (eg. Mac OS version is staking_deposit-cli-fdab65d-darwin-amd64.tar.gz)
+
 ```sh
 cd
 curl -LO https://github.com/ethereum/staking-deposit-cli/releases/download/v2.7.0/staking_deposit-cli-fdab65d-linux-amd64.tar.gz
@@ -184,10 +186,11 @@ If you typed in your mnemonic correctly, you will be greeted by an ASCII art of 
 1. A `keystore-m_<timestamp>.json` file: This is your validator signing keystore that your validator node will use to sign attestations. Keep this file extremely secure.
 2. A `deposit_data-<timestamp>.json`: This is the file that links your ETH deposit to your validator. You will only use this once, during the deposit process.
 
-Store both files on a new USB drive by copying the entire staking-deposit-cli folder into it. After that, remove the original copy by running:
+Store both files on a new USB drive by copying the entire staking-deposit-cli folder into it. 
 
 ```
-sudo rm -r $HOME/staking-deposit-cli/validator_keys
+cp -R /Users/<username>/<staking deposit folder>/ /Volumes/<name of USB drive>
+
 ```
 
 Restart your host device (e.g. working laptop) and remove the OS-on-a-stick. There will not be any persistent memory stored on it.
