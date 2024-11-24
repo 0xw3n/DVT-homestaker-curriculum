@@ -96,9 +96,9 @@ ssh <username>@<External_IP_address> -p 22 -i .ssh/id_ed25519 -v
 sudo nano /etc/ssh/sshd_config
 ```
 
-1. Uncomment `#AuthorizedKeysFile` if it is commented (by removing the `#` in front of it)
+1. Remove the `#` from `#AuthorizedKeysFile` (if necessary)
 2. Change `KbdInteractiveAuthentication yes` to `KbdInteractiveAuthentication no` and uncomment (by removing the `#` in front of it)
-3. Change `PasswordAuthentication yes` to `PasswordAuthentication no` and uncomment (by removing the `#` in front of it)
+3. Change `PasswordAuthentication yes` to `PasswordAuthentication no` (and remove any `#` in front of it)
 4. Change `#PermitRootLogin prohibit-password` to `PermitRootLogin no` , removing the `#` prefix
 
 Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`.
@@ -106,7 +106,6 @@ Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`.
 Now we restart the SSH server so it registers the new settings:
 
 ```bash
-sudo systemctl restart sshd
 sudo systemctl restart ssh
 ```
 
