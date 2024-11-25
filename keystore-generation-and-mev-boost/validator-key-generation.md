@@ -206,7 +206,7 @@ lsblk
 
 <figure><img src="../.gitbook/assets/image (110).png" alt=""><figcaption></figcaption></figure>
 
-Look for your USB drive in the output list. It will take a name similar to the screenshot above - i.e. `sdx`.
+Look for your USB drive in the output list. It will take a name similar to the screenshot above - i.e. `sda1`.
 
 After you find it, you can proceed to mount your USB drive onto the `/media` folder.
 
